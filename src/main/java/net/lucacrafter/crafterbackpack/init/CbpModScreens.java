@@ -7,14 +7,14 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
-import net.lucacrafter.crafterbackpack.client.gui.ContainerScreenScreen;
+import net.lucacrafter.crafterbackpack.client.gui.ContainerScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CbpModScreens {
     @SubscribeEvent
     public static void clientLoad(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
-            MenuScreens.register(CbpModMenus.CONTAINER_SCREEN.get(), ContainerScreenScreen::new);
+            MenuScreens.register(CbpModMenus.CONTAINER_SCREEN.get(), ContainerScreen::new);
         });
     }
 }

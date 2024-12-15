@@ -14,13 +14,13 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ContainerScreenScreen extends AbstractContainerScreen<ContainerScreenMenu> {
+public class ContainerScreen extends AbstractContainerScreen<ContainerScreenMenu> {
     private final static HashMap<String, Object> guistate = ContainerScreenMenu.guistate;
     private final Level world;
     private final int x, y, z;
     private final Player entity;
 
-    public ContainerScreenScreen(ContainerScreenMenu container, Inventory inventory, Component text) {
+    public ContainerScreen(ContainerScreenMenu container, Inventory inventory, Component text) {
         super(container, inventory, text);
         this.world = container.world;
         this.x = container.x;
@@ -31,7 +31,7 @@ public class ContainerScreenScreen extends AbstractContainerScreen<ContainerScre
         this.imageHeight = 166;
     }
 
-    private static final ResourceLocation texture = new ResourceLocation("cbp:textures/screens/container_screen.png");
+    private static final ResourceLocation texture = new ResourceLocation("cbp:textures/screens/container.png");
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
