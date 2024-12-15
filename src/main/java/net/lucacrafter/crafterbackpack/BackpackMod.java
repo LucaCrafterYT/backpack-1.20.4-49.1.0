@@ -3,6 +3,7 @@ package net.lucacrafter.crafterbackpack;
 import com.mojang.logging.LogUtils;
 import net.lucacrafter.crafterbackpack.item.ModCreativeModTabs;
 import net.lucacrafter.crafterbackpack.item.ModItems;
+import net.lucacrafter.crafterbackpack.registry.ModContainers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,7 @@ public class BackpackMod
 
         ModCreativeModTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         modEventBus.addListener(this::commonSetup);
 
