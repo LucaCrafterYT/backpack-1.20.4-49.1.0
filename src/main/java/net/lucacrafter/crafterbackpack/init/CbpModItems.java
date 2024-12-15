@@ -12,6 +12,6 @@ import net.lucacrafter.crafterbackpack.BackpackMod;
 
 public class CbpModItems {
     public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, BackpackMod.MOD_ID);
-    public static final RegistryObject<Item> BACKPACK = REGISTRY.register("backpack", () -> new BackpackItem());
+    public static final RegistryObject<Item> BACKPACK = REGISTRY.register("backpack", () -> new BackpackItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> LEATHER_STRAP = REGISTRY.register("leather_strap", () -> new LeatherStrapItem());
 }

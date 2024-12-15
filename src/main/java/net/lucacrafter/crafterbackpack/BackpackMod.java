@@ -2,6 +2,7 @@ package net.lucacrafter.crafterbackpack;
 
 import com.mojang.logging.LogUtils;
 import net.lucacrafter.crafterbackpack.init.CbpModItems;
+import net.lucacrafter.crafterbackpack.init.CbpModMenus;
 import net.lucacrafter.crafterbackpack.init.CbpModTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class BackpackMod
 
         CbpModTabs.REGISTRY.register(modEventBus);
         CbpModItems.REGISTRY.register(modEventBus);
+        CbpModMenus.REGISTRY.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -51,16 +51,19 @@ public class ContainerScreen extends AbstractContainerScreen<ContainerScreenMenu
 
     @Override
     public boolean keyPressed(int key, int b, int c) {
-        if (key == 256) {
-            this.minecraft.player.closeContainer();
+        if (key == 256) { // ESC key
+            if (this.minecraft != null && this.minecraft.player != null) {
+                this.minecraft.player.closeContainer();
+            }
             return true;
         }
         return super.keyPressed(key, b, c);
     }
 
+
     @Override
     protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-        guiGraphics.drawString(this.font, Component.translatable("gui.cbp.container_screen.label_backpack"), 5, 4, -12829636, false);
+        guiGraphics.drawString(this.font, Component.translatable("gui.cbp.container_screen.label_backpack"), 6, 6, -12829636, false);
     }
 
     @Override
