@@ -1,19 +1,15 @@
 package net.lucacrafter.crafterbackpack;
 
 import com.mojang.logging.LogUtils;
-import net.lucacrafter.crafterbackpack.item.ModCreativeModTabs;
-import net.lucacrafter.crafterbackpack.item.ModItems;
-import net.lucacrafter.crafterbackpack.registry.ModContainers;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.lucacrafter.crafterbackpack.init.CbpModItems;
+import net.lucacrafter.crafterbackpack.init.CbpModTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,9 +25,8 @@ public class BackpackMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModContainers.CONTAINERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        CbpModTabs.REGISTRY.register(modEventBus);
+        CbpModItems.REGISTRY.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

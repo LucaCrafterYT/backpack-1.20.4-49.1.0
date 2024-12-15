@@ -1,5 +1,6 @@
 {
   "item.cbp.backpack": "Backpack",
   "item.cbp.leather_strap": "Leather Strap",
-  "creativetab.crafter_backpack": "Crafter Backpack"
+  "creativetab.crafter_backpack": "Crafter Backpack",
+  "gui.cbp.container_screen.label_backpack": "Backpack"
 }
