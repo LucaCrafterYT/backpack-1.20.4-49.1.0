@@ -34,12 +34,10 @@ public abstract class BackpackContainer extends AbstractContainerMenu {
         }
     }
 
-    @Override
     public boolean stillValid(Inventory playerInventory) {
         return true; // Keep the container valid as long as it's open.
     }
 
-    @Override
     public ItemStack quickMoveStack(Inventory playerInventory, int index) {
         Slot slot = this.slots.get(index);
         if (slot != null && slot.hasItem()) {
